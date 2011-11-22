@@ -16,7 +16,7 @@ module Mercury
       Rails.application.routes.draw do
         match '/editor(/*requested_uri)' => "mercury#edit", :as => :mercury_editor
 
-        namespace :mercury do
+        scope module: :mercury do
           resources :images
         end
 
